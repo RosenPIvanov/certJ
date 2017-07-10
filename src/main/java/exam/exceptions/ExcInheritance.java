@@ -1,8 +1,5 @@
 package exam.exceptions;
 
-/**
- * Created by xworks.admin on 26/06/2017.
- */
 public class ExcInheritance {
 
     class ExA extends Exception {
