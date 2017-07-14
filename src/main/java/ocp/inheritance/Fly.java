@@ -1,6 +1,5 @@
 package ocp.inheritance;
 
-
 public interface Fly {
     public int getWingSpan() throws Exception;
 
