@@ -1,8 +1,5 @@
 package oca;
 
-/**
- * Created by xworks.admin on 10/07/2017.
- */
 public class SwitchTest {
 
     public static long getSwitch(int x){

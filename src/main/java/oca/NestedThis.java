@@ -13,6 +13,8 @@ public class NestedThis {
             String c = "temp";
             // Line 1
             c = NestedThis.this.a;
+            System.out.println(this.getClass());
+            System.out.println(NestedThis.this.getClass());
             //
             return c;
         }

@@ -15,8 +15,7 @@ class Base {
     }
 }
 
-public class NewBase extends
-    Base {
+public class NewBase extends Base {
     void method1() {
         someMethod("args");
         //if we do super.method1(); have to declare or catch

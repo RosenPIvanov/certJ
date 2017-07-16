@@ -15,6 +15,8 @@ public class DateTest {
 
     public static void main(String[] args) {
         System.out.println( ((DateTest) null).a);
+        String a = "a" + null;
+        System.out.println(a);
 
         Period.ofDays(1);
         Period.ofWeeks(1);

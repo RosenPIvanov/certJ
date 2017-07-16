@@ -1,8 +1,6 @@
 package oca;
 
-/**
- * Created by xworks.admin on 10/07/2017.
- */
+
 public class InitailizeTest {
 
         private int j;
@@ -21,6 +19,8 @@ public class InitailizeTest {
             int x = 0;
             if (false) { x=3; }
             //while (false) { x=3; } ureachable
+
+            
             if (new Boolean("true") == Boolean.TRUE) {
                 System.out.println("equal");
             }
