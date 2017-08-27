@@ -18,7 +18,13 @@ public class PathTests {
         System.out.println(path1.relativize(path2));//
         System.out.println(path2.relativize(path1));//
         test1();
+        testRelativeFiles();
+        testAbsolute();
+        testMixed();
+        testJoinAbsoluteAndRelative();
+        testNormalize();
     }
+
     static void test1(){
         System.out.println("new test");
         Path path1 = Paths.get("C:/OCP/8-1.txt");
@@ -26,4 +32,50 @@ public class PathTests {
         Path path3 = path1.resolve(path2.relativize(path1));
         System.out.println(path3);
     }
+
+    static void testRelativeFiles(){
+        System.out.println("RelativeFiles test");
+        Path path1 = Paths.get("fish.txt");
+        Path path2 = Paths.get("birds.txt");
+        System.out.println(path1.relativize(path2));
+        System.out.println(path2.relativize(path1));
+    }
+
+    static void testAbsolute(){
+        System.out.println("Absolute test");
+        Path path1 = Paths.get("/fish.txt");
+        Path path2 = Paths.get("/someDir/birds.txt");
+        System.out.println(path1.relativize(path2));
+        System.out.println(path2.relativize(path1));
+    }
+
+    static void testMixed(){
+        System.out.println("Mixed test");
+        //the same drive letter is required for widows
+        try{
+        Path path1 = Paths.get("fish.txt");
+        Path path2 = Paths.get("/someDir/birds.txt");
+        System.out.println(path1.relativize(path2));
+        System.out.println(path2.relativize(path1));}
+        catch (IllegalArgumentException e){
+            e.printStackTrace();
+        }
+    }
+
+    static void testJoinAbsoluteAndRelative(){
+        System.out.println("testJoinAbsoluteAndRelative");
+        Path path1 = Paths.get("/cats/../panter");
+        Path path2 = Paths.get("food");
+        System.out.println(path1.resolve(path2));
+        System.out.println(path2.resolve(path1));//path2 is ignored
+    }
+
+    static void testNormalize(){
+        System.out.println("testNormalize");
+        Path path1 = Paths.get("/data");
+        Path path2 = Paths.get("/user/home");
+        System.out.println(path1.resolve(path2));
+        System.out.println(path2.resolve(path1));//path2 is ignored
+    }
+
 }
