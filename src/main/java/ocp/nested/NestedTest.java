@@ -11,5 +11,10 @@ public class NestedTest {
 
 
  class Inner {
-    public class Outer {}
+    public class Outer {
+        //Inner classes are not allowed to contain static methods
+        //or static variables. Only nested static classes are permitted to contain statics
+        //static int x=0; compilation error
+
+    }
 }

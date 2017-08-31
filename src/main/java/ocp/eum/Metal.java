@@ -1,10 +1,11 @@
 package ocp.eum;
 
-/**
- * Created by xworks.admin on 03/07/2017.
- */
+
 enum Metal {
     COPPER, GOLD;
+    /*public*/ Metal(int x) {
+        System.out.print("public constructor is not allowed");
+    }
     Metal() {
         System.out.print("constructor:");
     }
