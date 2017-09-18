@@ -13,7 +13,9 @@ public class ExceptionCase1 {
         Thread t1 = new Thread();
         t1.start();
         System.out.print("1 ");
-        t1.wait(5000);
-        System.out.print("2 ");
+       //OK synchronized (t1) {
+            t1.wait(5000);
+            System.out.print("2 ");
+        //OK}
     }
 }

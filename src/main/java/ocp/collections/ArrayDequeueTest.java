@@ -2,6 +2,7 @@ package ocp.collections;
 
 
 import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class ArrayDequeueTest {
     public static void main(String args[]) {
@@ -17,6 +18,23 @@ public class ArrayDequeueTest {
             System.out.println(greetings.pop());
 
         fifo();
+
+        test2();
+    }
+
+    static void test2(){
+        System.out.println("test2");
+
+
+
+        Deque<Integer> d = new ArrayDeque<>();
+        d.add(1);
+        d.push(2);
+        d.pop();
+        d.offerFirst(3);
+        d.remove();
+        System.out.println(d);
+
     }
     static void fifo(){
         System.out.println();
