@@ -19,6 +19,5 @@ public class DurationPeriod {
         System.out.println(s);
         System.out.println(d);
         System.out.println(p);
-
     }
 }
