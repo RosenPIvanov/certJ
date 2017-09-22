@@ -14,8 +14,10 @@ public class JDBCTest {
         Connection conn = DriverManager.getConnection(url, userName, password);
 
         Statement stmt = conn.createStatement();
+        stmt.setMaxRows(2);///!!!! other
          ResultSet rs = stmt.executeQuery("select count(*) from animal");
          if (rs.next()) System.out.println(rs.getInt(1));
+
 
     }
     }

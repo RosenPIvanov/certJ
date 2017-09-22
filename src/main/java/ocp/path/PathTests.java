@@ -28,19 +28,22 @@ public class PathTests {
         testResolveException();
         testNormalize2();
         testNormalize2();
+
+        getValue();
     }
 
-    static void testNormalize2(){
+    static void testNormalize2() {
 
         final Path path = Paths.get(".").normalize(); // //""
         int count = 0;
-        for(int i=0; i<path.getNameCount(); ++i) {
+        for (int i = 0; i < path.getNameCount(); ++i) {
             count++;
             System.out.println(path.getName(i));//""
         }
         System.out.println(count);
 
     }
+
     static void testSubPath() {
         System.out.println("testSubPath");
         Path path = Paths.get("/zoo/animals/bear/koala/food.txt");
@@ -123,5 +126,13 @@ public class PathTests {
             e.printStackTrace();
         }
 
+    }
+
+    public static void getValue() {
+
+         Path p1 = Paths.get("c:\\a\\b\\c");
+        String x = p1.getName(1).toString();
+        String y = p1.subpath(1, 2).toString();
+          System.out.println( x + " : " + y);
     }
 }

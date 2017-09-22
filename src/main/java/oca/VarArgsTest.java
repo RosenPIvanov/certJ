@@ -14,6 +14,7 @@ public class VarArgsTest {
     public static void main(String args[]){
         m1(new String[]{""});
         m2("");
+        m2(new String[]{""});
 
     }
 }

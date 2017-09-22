@@ -17,5 +17,6 @@ public class WalkTest {
                 (p, a) -> a.isDirectory() && !path.equals(p)) // w1 bipredicate
                 .findFirst().isPresent(); // w2
         System.out.println(myBoolean ? "No Sub-directory" : "Has Sub-directory");
+        Files.list(path);
     }
 }

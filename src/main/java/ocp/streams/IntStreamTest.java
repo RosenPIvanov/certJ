@@ -7,6 +7,7 @@ import java.util.stream.IntStream;
  */
 public class IntStreamTest { public static void main(String args[]) {
     IntStream is = IntStream.empty();
+    IntStream.of(1,2);// no List arg
     is.average(); //returns the type int.
      is.average();// returns the type OptionalInt.
     is.findAny(); //returns the type int.
