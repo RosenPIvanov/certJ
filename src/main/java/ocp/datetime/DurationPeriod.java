@@ -21,8 +21,13 @@ public class DurationPeriod {
         System.out.println(p);
 
 
-        Duration dd = Duration.ofMillis(1100); System.out.println(dd);
-        dd = Duration.ofSeconds(61); System.out.println(dd);
+        Duration dd = Duration.ofMillis(1100);
+        System.out.println(dd);
+        dd = Duration.ofSeconds(61);
+        System.out.println(dd);
         System.out.println(Period.ofDays(370));
+        Period pp = Period.ofDays(1);
+        System.out.println(pp);
+
     }
 }
