@@ -2,7 +2,9 @@ package ocp.streams;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Sum {
     public static void main(String[] args) {
@@ -17,6 +19,12 @@ public class Sum {
                 //.map(e -> e.getPrice())
                 .sum();
         System.out.println("Total Price of Red Toys: " + totalPrice);
+
+        List<Integer> names = Arrays.asList(1, 2, 3);
+        System.out.println(names.stream().mapToInt(x->x).sum());
+        System.out.println(names.stream().reduce(0, (a, b)->a+b));
+        System.out.println(names.stream().collect(Collectors.mapping(x->x, Collectors.summarizingInt(x->x))).getSum());
+        System.out.println(names.stream().collect(Collectors.summarizingInt(x->x)).getSum());
     }
 
 

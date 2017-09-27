@@ -24,8 +24,7 @@ public class ZonedDateTimeTest {
         System.out.println("DST");
 
 
-
-                LocalDateTime ld = LocalDateTime.of(2015, Month.OCTOBER, 31, 10, 0);
+        LocalDateTime ld = LocalDateTime.of(2015, Month.OCTOBER, 31, 10, 0);
 
         ZonedDateTime date1 = ZonedDateTime.of(ld, ZoneId.of("US/Eastern"));
         date1 = date1.plus(Duration.ofDays(1));
@@ -34,6 +33,15 @@ public class ZonedDateTimeTest {
         date1 = ZonedDateTime.of(ld, ZoneId.of("US/Eastern"));
         date1 = date1.plus(Period.ofDays(1));
         System.out.println(date1);
+
+
+        LocalDateTime ldt = LocalDateTime.of(2017, 06, 02, 6, 0, 0);
+        ZoneOffset nyOffset = ZoneOffset.ofHoursMinutes(-5, 0);
+        ZoneId nyZone = ZoneId.of("America/New_York");
+        OffsetDateTime nyOdt = ldt.atOffset(nyOffset);
+        ZonedDateTime nyZdt = ldt.atZone(nyZone);
+        Duration d = Duration.between(nyOdt, nyZdt);
+        System.out.println(d);
 
 
     }

@@ -141,6 +141,24 @@ public class GenericsTest {
 
 
     }
+
+
+        A a = new A();
+        B b = new B();
+        C c = new C();
+
+    void test1AddData(List<? super B> dataList) {
+        //dataList.add(a);
+        dataList.add(c);
+        for (Object bb: dataList){}
+    }
+
+    void test1AddData2(List<? extends B> dataList){
+        //c =  dataList.get(0);
+        a = dataList.get(0);
+        b = dataList.get(0);
+        for (B bb: dataList){}
+    }
 }
 
 class Gift {

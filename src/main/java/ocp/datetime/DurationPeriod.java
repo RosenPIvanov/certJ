@@ -19,5 +19,10 @@ public class DurationPeriod {
         System.out.println(s);
         System.out.println(d);
         System.out.println(p);
+
+
+        Duration dd = Duration.ofMillis(1100); System.out.println(dd);
+        dd = Duration.ofSeconds(61); System.out.println(dd);
+        System.out.println(Period.ofDays(370));
     }
 }

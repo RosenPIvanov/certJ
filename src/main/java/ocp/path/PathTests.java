@@ -19,6 +19,7 @@ public class PathTests {
         System.out.println(path2.relativize(path1));//
         test1();
         testRelativeFiles();
+        testRelativize2();
         testAbsolute();
         testMixed();
         testJoinAbsoluteAndRelative();
@@ -30,6 +31,15 @@ public class PathTests {
         testNormalize2();
 
         getValue();
+    }
+
+    private static void testRelativize2() {
+        System.out.println("testRelativize2");
+        //Path p1 = Paths.get("c:\\personal\\.\\photos\\..\\readme.txt");
+        Path p1 = Paths.get("c:\\personal\\photos\\..\\readme.txt");
+        Path p2 = Paths.get("c:\\personal\\index.html");
+        Path p3 = p1.relativize(p2);
+        System.out.println(p3);
     }
 
     static void testNormalize2() {

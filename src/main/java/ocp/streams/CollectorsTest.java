@@ -3,6 +3,7 @@ package ocp.streams;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -17,11 +18,14 @@ public class CollectorsTest
         //Counting => Long!!!!!!!!!!!!!!!!!!
         Map<Integer, Long> data = names.stream().collect(Collectors.groupingBy(
                 String::length,
-                Collectors.counting()));
+                Collectors.counting()
+                )
+        );
         System.out.println(data.values());
         //Collectors.summingInt()
         //Collectors.summingLong()
         //Collectors.summingDouble()
+
 
 
     }

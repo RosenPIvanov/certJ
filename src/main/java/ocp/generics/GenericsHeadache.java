@@ -28,5 +28,19 @@ public class GenericsHeadache {
         Collection<StringBuffer> bc = getWordsStartingWith(b, 'b');
     }
 
+    //other
+    public List<? extends GenericsHeadache> m4(List<? extends GenericsHeadache> strList) {
+        List<GenericsHeadache> list = new ArrayList<>();
+        list.add(new GenericsHeadache());
+        list.addAll(strList);
+        return list;
+    }
+
+    public List<GenericsHeadache> m5(List<? extends GenericsHeadache> strList) {
+        List<GenericsHeadache> list = new ArrayList<>();
+        list.add(new GenericsHeadache());
+        list.addAll(strList);
+        return list;
+    }
 
 }
